@@ -1,0 +1,8 @@
+[mongodb]
+host=xxx.xxx
+port=27017
+username=admin
+password=admin
+db=src
+# 创建domain的唯一索引
+# db.asserts.createIndex( { "domain": 1 }, { unique: true } )

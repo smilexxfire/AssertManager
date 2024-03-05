@@ -1,0 +1,2 @@
+use src
+db.asserts.createIndex( { "domain": 1 }, { unique: true } )
