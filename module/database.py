@@ -22,3 +22,8 @@ def conn_db(collection):
     conn = ConnMongo().conn
     if db_name:
         return conn[db_name][collection]
+
+# db = conn_db("asserts")
+# results = db.find()
+# for rs in results:
+#     print(rs)

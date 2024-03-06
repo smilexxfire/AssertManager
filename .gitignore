@@ -160,5 +160,4 @@ cython_debug/
 .idea/
 default.ini
 test.py
-**/__init__.py
 
