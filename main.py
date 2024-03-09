@@ -40,8 +40,8 @@ def yaml_to_db():
         data = yaml.safe_load(file)
     # 获取数据
     companies = data.get('companies', [])
-    db = conn_db("asserts")
     # 插入数据到数据库
+    insert_list = list()
     for company in companies:
         for domain in company['domains']:
             document = {
@@ -49,12 +49,17 @@ def yaml_to_db():
                 'domain': domain,
                 'insert_time': datetime.now()
             }
-            try:
-                db.insert_one(document)
-                print(f"插入记录完成{document}")
-            except pymongo.errors.DuplicateKeyError:
-                # 主键重复不处理
-                print(f"记录重复{document}")
+            insert_list.append(document)
+    try:
+        db = conn_db("asserts")
+        db.insert_many(insert_list, ordered=False)
+    except pymongo.errors.BulkWriteError as e:
+        for error in e.details['writeErrors']:
+            if error['code'] == 11000:  # E11000 duplicate key error collection，忽略重复主键错误
+                pass
+                # print(f"Ignoring duplicate key error for document with _id {error['op']['_id']}")
+            else:
+                raise  # 如果不是重复主键错误，重新抛出异常
 
 if __name__ == '__main__':
     txt_to_yaml()
