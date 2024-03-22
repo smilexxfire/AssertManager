@@ -3,6 +3,13 @@ import pymongo
 import yaml
 from datetime import datetime
 from module.database import conn_db
+import re
+def is_valid_ipv4(address):
+    pattern = r'^(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.' \
+              r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.' \
+              r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.' \
+              r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)$'
+    return bool(re.match(pattern, address))
 
 def format_all_to_single_yaml(input_directory, output_file):
     # 获取输入目录下所有的 domains.txt 文件
@@ -44,6 +51,9 @@ def yaml_to_db():
     insert_list = list()
     for company in companies:
         for domain in company['domains']:
+            # 不添加ipv4
+            if is_valid_ipv4(domain):
+                continue
             document = {
                 'assert_name': company['name'],
                 'domain': domain,
