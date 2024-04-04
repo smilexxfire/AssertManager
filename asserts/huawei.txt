@@ -8,7 +8,6 @@ shanhaitujian.net
 hikunpeng.com.cn
 cdnhwc3.cn
 huaweiita.com
-120.86.117.209
 attendee.cn
 bescloud.com.cn
 gneec.com.cn
@@ -17,7 +16,6 @@ hwcloudlive.com
 huaweiirad.com
 bisheng.cn
 huaweiyun.com
-183.220.4.146
 cdnhwc1.cn
 hiascend.cn
 huaweicloudlive.com
@@ -38,7 +36,6 @@ huawei.cn
 gneec3.cn
 besclouds.com.cn
 gneec4.cn
-183.220.4.21
 saasops.tech
 dcia.org.cn
 hikunpeng.net
@@ -118,7 +115,6 @@ km9g.cn
 huaweicloudsite.cn
 hiu58.cn
 cdnhwcpsd13.com
-39.129.214.83
 cza84.cn
 cdnhwcidu117.cn
 cdnhwcggk22.com
@@ -204,7 +200,6 @@ huaweiyun.cn
 cdnhwcgnc118.com
 km2g.cn
 cdnhwcpcw110.cn
-39.129.214.245
 cdnhwc8.com
 cdnhwclrd102.cn
 vo6z2.cn
