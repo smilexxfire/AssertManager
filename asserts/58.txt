@@ -7,7 +7,7 @@ xinchong.com
 58antenna.com
 58cdn.com.cn
 58v5.cn
-58.com
+58.com -
 58dns.org
 jxksw.net
 58ganji-corp.com
@@ -16,7 +16,7 @@ m91.cn
 58ganji.com
 58control.cn
 58dnslog.cn
-58.com.cn
+58.com.cn -
 58img.com.cn
 chinahr.com
 chrstatic.com

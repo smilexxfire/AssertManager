@@ -2,10 +2,10 @@ oppo
 allawntech.com
 oppowork.com
 wireless-intelligence.com
-oppo.cn
-coloros.com
-oppo.com
-coloros.net
+oppo.cn -
+coloros.com -
+oppo.com -
+coloros.net -
 allawno.com
 zeku.com
 ioppo.net
@@ -21,6 +21,6 @@ leafoa.com
 yeahzee.cn
 institutecv.com
 oppofind.com
-myoppo.com
+myoppo.com -
 opposales.com
 oppoer.cn
