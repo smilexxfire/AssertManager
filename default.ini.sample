@@ -4,5 +4,5 @@ port=27017
 username=admin
 password=admin
 db=src
-# 创建domain的唯一索引
+# 创建domain的唯一索x引
 # db.asserts.createIndex( { "domain": 1 }, { unique: true } )
