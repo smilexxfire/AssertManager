@@ -23,9 +23,14 @@ def format_all_to_db(input_directory):
 
         # 读取企业名称和域名信息
         with open(input_file_path, 'r') as file:
-            lines = file.readlines()
+            lines = [line.strip() for line in file.readlines()]
             company_name = lines[0].strip()
+            # 检查是否存在备注内容，截断
+            if "this is ps -" in lines:
+                index = lines.index("this is ps -")
+                lines = lines[:index]
             domains = [line.strip() for line in lines[1:]]
+            print(domains)
             for domain in domains:
                 if is_valid_ipv4(domain):
                     continue
