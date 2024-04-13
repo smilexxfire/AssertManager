@@ -1,16 +1,16 @@
 银联
 95516.net
 cup.com.cn
-unionpay.net
-unionpay.com
+unionpay.net -
+unionpay.com -
 chinaunionpay.com.cn
 cup62.cn
 chinaunionpay.net
 unionpaysecure.com
 chinaunionpay.com
 95516.com
-unionpayintl.cn
-unionpayintl.com
+unionpayintl.cn -
+unionpayintl.com -
 upcs-sh.com
 95534.biz
 quanminfu.com
@@ -22,27 +22,27 @@ happyums.com
 银行卡服务专家.中国
 银行卡服务专家.cn
 chinaumswh.com
-umspay.cn
+umspay.cn -
 chinaums.com
 ums95534.com
 支付专家.cn
 支付专家.中国
-umsrunner.com
+umsrunner.com -
 小跟班.com
-yesrunner.net
-yesrunner.cn
+yesrunner.net -
+yesrunner.cn -
 银联商务.公司
-dtums.com
-supdatasys.cn
+dtums.com -
+supdatasys.cn -
 chinapayhongkong.com
-china-pay.com.cn
-chinapay.com
-uni-bank.net
-uni-bank.com
-bjpos.com.cn
-bjpos.com
+china-pay.com.cn -
+chinapay.com -
+uni-bank.net -
+uni-bank.com -
+bjpos.com.cn -
+bjpos.com -
 chinapayhongkong.com
-china-pay.com.cn
-chinapay.com
+china-pay.com.cn -
+chinapay.com -
 unionpayintl.cn
 unionpayintl.com

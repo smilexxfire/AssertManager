@@ -2,7 +2,7 @@
 keetadelivery.com.cn
 wandie.com
 mykeeta.cn
-sankuai.com
+sankuai.com -
 zuitu.com
 mtmssup0.com
 mtmssup.com
@@ -10,8 +10,8 @@ mtmssdn.com
 mtmss.com
 mtmssdn0.com
 mosmss.com
-meituan.net
-meituan.com
+meituan.net -
+meituan.com -
 mosdns.cn
 mosdns.net
 mosdns.com

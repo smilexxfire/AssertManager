@@ -1,13 +1,13 @@
 滴滴
 xiaojukeji.com
-didiyun.com
+didiyun.com -
 udache.com
-didi.cn
+didi.cn -
 didiwuxian.com
 didistatic.com
 didiopenapi.com
 juyanwenjuan.com
-didiglobal.com
+didiglobal.com -
 didimobility.com
 didiapp.net.cn
 didiyunapi.com
@@ -15,7 +15,7 @@ didiyun.org
 didi.xin
 xiaojuchefu.cn
 apptaxi.com.cn
-diditaxi.com.cn
+diditaxi.com.cn -
 didialift.com
 didiqiche.com
 kuaixinju.com
@@ -39,9 +39,9 @@ idiche.com.cn
 gocarjourney.com
 xiaojuchangxing.com
 zxxnkj.com
-didichuxing.com
+didichuxing.com -
 featureprobe.com
-didicloud.com.cn
+didicloud.com.cn -
 chengxinyouxuan.com
 zxwcbj.com
 juziwuxian.com

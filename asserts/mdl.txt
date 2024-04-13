@@ -1,12 +1,12 @@
 麦当劳
-mcd.mobi
-mcd.cn
-mcdonalds.com.cn
-mcd.cloud
-mcd.com.cn
-mcdchina.net
+mcd.mobi -
+mcd.cn -
+mcdonalds.com.cn -
+mcd.cloud -
+mcd.com.cn -
+mcdchina.net -
 4008-517-517.cn
-bigmac.com.cn
-rmhc.org.cn
-mcd.cc
-mcdonalds.cn
+bigmac.com.cn -
+rmhc.org.cn -
+mcd.cc -
+mcdonalds.cn -

@@ -67,12 +67,12 @@ jdcloud-oss.com
 yizhitou.com
 jingdong.com
 3.cn
-jd.com.cn
+jd.com.cn -
 jingpinhui.com
 jdemall.com
 360buyinternational.com
 360buyimg.com
-jd.com
+jd.com -
 360buy.com.cn
 360buy.com
 360buy.cn

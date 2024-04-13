@@ -1,5 +1,5 @@
 小米
-mi.com
+mi.com -
 i3ciebwk6ixfb.com
 xiaomicorp.cn
 mi-img2.com
@@ -17,12 +17,12 @@ leijun.com
 xiaomiinc.com.cn
 mi-img.com
 xiaomiinc.com
-xiaomi.net
+xiaomi.net -
 miredian.com
 mi-cdn.com
 milliant.com
-xlaomi.net
-xiaomi.cn
+xlaomi.net -
+xiaomi.cn -
 xiaomiinc.net
 miren.cn
 xiaomidns.cn
