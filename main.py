@@ -11,6 +11,9 @@ def is_valid_ipv4(address):
               r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.' \
               r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)$'
     return bool(re.match(pattern, address))
+# 定义一个函数来执行模糊查询
+def fuzzy_search(substring, strings):
+    return [s for s in strings if substring.lower() in s.lower()]
 
 def format_all_to_db(input_directory):
     # 获取输入目录下所有的 domains.txt 文件
@@ -23,17 +26,20 @@ def format_all_to_db(input_directory):
 
         # 读取企业名称和域名信息
         with open(input_file_path, 'r') as file:
-            lines = [line.strip() for line in file.readlines()]
+            lines = [line.strip() for line in file.readlines() if line.strip()]
             company_name = lines[0].strip()
-            # 检查是否存在备注内容，截断
-            if "this is ps -" in lines:
-                index = lines.index("this is ps -")
+            # 检查是否存在备注内容
+            search_results = fuzzy_search("this is ps", lines)
+            if search_results:  # 存在则截断
+                index = lines.index(search_results[0])
                 lines = lines[:index]
             domains = [line.strip() for line in lines[1:]]
-            print(domains)
             for domain in domains:
-                if is_valid_ipv4(domain):
+                if is_valid_ipv4(domain):   # 忽略ipv4
                     continue
+                # 删除字符*
+                domain = domain.replace("*.", "")
+                print(domain)
                 document = {
                     'assert_name': company_name,
                     'domain': domain,
