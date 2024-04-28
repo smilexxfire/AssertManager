@@ -1,0 +1,6 @@
+华住酒店
+*.huazhu.com
+*.hworld.com
+*.h-world.com
+*.cjia.com
+*.mgit365.com

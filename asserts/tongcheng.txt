@@ -1,2 +1,10 @@
 同程旅行
 tclymd.com -
+*.ly.com -
+*.elong.com -
+*.17u.cn -
+*.17usoft.com -
+this is ps
+范围外：
+track.ly.com
+smgmail.17u.cn

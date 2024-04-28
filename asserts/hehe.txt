@@ -1,0 +1,8 @@
+上海合合信息科技股份有限公司
+*.camscanner.com
+*.camcard.com
+this is ps
+outscope
+*.textin.com
+*.qixin.com
+support.intsig.com

@@ -1,0 +1,8 @@
+shein
+sheincorp.cn
+dotfashion.cn
+geiwohuo.com
+ytengvip.com
+this is ps
+outscope
+*.biz.sheincorp.cn

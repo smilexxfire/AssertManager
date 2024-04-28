@@ -1,0 +1,5 @@
+翼支付
+*.bestpay.com.cn
+*.bestpay.cn
+*.bestpay.net
+*.tycredit.com

@@ -1,0 +1,9 @@
+北京北森云计算股份有限公司
+*.italent.cn
+*.zhiye.com
+*.beisen.com
+*.ceping.com
+this is ps
+outscope
+tms系统		*.tms.beisen.com
+tms系统		tms.beisen.com

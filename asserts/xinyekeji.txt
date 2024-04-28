@@ -1,0 +1,6 @@
+信也科技集团
+*.ppdai.com
+*.xinye.com
+*.koofenqi.com
+this is ps
+依据服务器资源归属进行判别，三方资产漏洞暂不收取。

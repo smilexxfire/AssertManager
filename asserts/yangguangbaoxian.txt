@@ -1,0 +1,18 @@
+阳光保险
+*.sinosig.com
+*.ygonefamily.com
+*.ygbx.com
+*.ygibao.com
+*.eyangguang.com
+*.yg95510.com
+*.ygrhhospital.com
+*.ygxinbao.com
+*.4000-000-000.com
+*.inpgy.com
+
+this is ps
+int\uat\stage等属于测试系统，漏洞危害级别不高于中级
+
+outscope:
+*.yghsh.com
+海棠湾酒店相关系统

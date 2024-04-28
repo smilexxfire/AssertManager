@@ -1,0 +1,9 @@
+上海贝锐
+oray.com
+oray.net
+this is ps
+outscope
+*.rc03.oray.com
+phddns*.oray.net
+phfw*.oray.net
+ns*.oray.net
