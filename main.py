@@ -1,7 +1,7 @@
 import os
 import pymongo
 from datetime import datetime
-from module.database import conn_db
+from module.database import conn_db, insert_to_db, create_index
 import re
 import sys
 
@@ -25,7 +25,7 @@ def format_all_to_db(input_directory):
         input_file_path = os.path.join(input_directory, input_file)
 
         # 读取企业名称和域名信息
-        with open(input_file_path, 'r') as file:
+        with open(input_file_path, 'r', encoding="utf8") as file:
             lines = [line.strip() for line in file.readlines() if line.strip()]
             company_name = lines[0].strip()
             # 检查是否存在备注内容
@@ -39,7 +39,6 @@ def format_all_to_db(input_directory):
                     continue
                 # 删除字符*
                 domain = domain.replace("*.", "")
-                print(domain)
                 document = {
                     'assert_name': company_name,
                     'domain': domain,
@@ -51,16 +50,7 @@ def format_all_to_db(input_directory):
                     document["domain"] = domain
                 insert_data.append(document)
     # 插入数据库
-    try:
-        db = conn_db("asserts")
-        result = db.insert_many(insert_data, ordered=False)
-    except pymongo.errors.BulkWriteError as e:
-        for error in e.details['writeErrors']:
-            if error['code'] == 11000:  # E11000 duplicate key error collection，忽略重复主键错误
-                pass
-                # print(f"Ignoring duplicate key error for document with _id {error['op']['_id']}")
-            else:
-                raise  # 如果不是重复主键错误，重新抛出异常
+    insert_to_db(insert_data)
 
 def txt_to_db():
     # 示例用法
@@ -75,22 +65,9 @@ def check():
         sys.exit(1)
     # 检查数据库连接是否正常
     print("检查数据库连接...")
-    db = conn_db("asserts")
-
 
     # 为数据库创建索引
-    try:
-        # 创建索引，并设置 background 参数为 True
-        db.create_index([("domain", pymongo.ASCENDING)])
-        print("创建索引...")
-
-    except pymongo.errors.OperationFailure as e:
-        # 检查错误消息是否为索引已存在的错误
-        if "An existing index has the same name as the requested index" in str(e):
-            print("索引已存在...")
-        else:
-            # 如果错误消息不是索引已存在的错误，则重新引发异常
-            raise e
+    create_index()
 
     print("检查通过 enjoy it...")
 

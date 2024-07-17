@@ -4,7 +4,7 @@ import os
 
 def read_ini_config(section_name, key_name, file_name=os.path.dirname(os.path.abspath(__file__)) + "/../default.ini"):
     config = configparser.ConfigParser()
-    config.read(file_name)
+    config.read(file_name, encoding='utf-8')
     value = config.get(section_name, key_name)
     return value
 
@@ -28,3 +28,7 @@ def rename_dict_key(dict_obj, old_key, new_key):
 def delete_file_if_exists(file_path):
     if os.path.exists(file_path):
         os.remove(file_path)
+
+if __name__ == '__main__':
+    b = read_ini_config("mongodb", "host")
+    print(b)

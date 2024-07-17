@@ -1,6 +1,7 @@
 [mongodb]
 host=xxx.xxx
 port=27017
-username=admin
-password=admin
+;默认为空密码，推荐设置账号密码后填写
+username=
+password=
 db=src
