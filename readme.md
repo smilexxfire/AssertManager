@@ -7,7 +7,7 @@
 ![](https://qiniu.xxf.world/pic/2024/04/29/9ca685e9-a5b8-4282-a502-2309b366fa74.png)
 ## 使用
 环境依赖
-- mongo
+- mongodb
 
 使用步骤
 1. 将mongo连接信息填入default.ini.sample文件，并重命名为default.ini
@@ -25,3 +25,6 @@ todo
 - [x] 运行前检查环境
 - [x] 自动添加索引
 - [x] 支持src备注信息
+
+docker快速搭建mongodb
+`docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=change_your_password --name mymongo mongo`
