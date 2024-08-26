@@ -1,5 +1,5 @@
 [mongodb]
-host=xxx.xxx
+host=xx.xx.xx.xx
 port=27017
 ;默认为空密码，推荐设置账号密码后填写
 username=

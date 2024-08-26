@@ -34,23 +34,33 @@ def insert_to_db(data):
                 # print(f"Ignoring duplicate key error for document with _id {error['op']['_id']}")
             else:
                 raise  # 如果不是重复主键错误，重新抛出异常
-
-def create_index():
+def insert_to_comment_db(data):
+    # 插入数据库
     try:
-        db = conn_db("asserts")
-        # 创建索引，并设置 background 参数为 True
-        db.create_index([("domain", pymongo.ASCENDING)])
-        print("创建索引...")
+        db = conn_db("comments")
+        result = db.insert_many(data, ordered=False)
+    except pymongo.errors.BulkWriteError as e:
+        for error in e.details['writeErrors']:
+            if error['code'] == 11000:  # E11000 duplicate key error collection，忽略重复主键错误
+                pass
+                # print(f"Ignoring duplicate key error for document with _id {error['op']['_id']}")
+            else:
+                raise  # 如果不是重复主键错误，重新抛出异常
 
+def create_index(collection, field_name):
+    # 为数据库创建索引
+    db = conn_db(collection)
+    try:
+        # 创建索引
+        db.create_index([(field_name, pymongo.ASCENDING)], unique=True)
+        print(f"创建{collection}库{field_name}字段索引...")
     except pymongo.errors.OperationFailure as e:
         # 检查错误消息是否为索引已存在的错误
         if "An existing index has the same name as the requested index" in str(e):
-            print("索引已存在...")
+            print(f"{field_name}索引已存在...")
         else:
             # 如果错误消息不是索引已存在的错误，则重新引发异常
             raise e
-    except Exception as e:
-        print("数据库连接失败")
 
 if __name__ == '__main__':
     db = conn_db("asserts")
