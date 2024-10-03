@@ -22,8 +22,7 @@
 docker快速搭建mongodb
 `docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=change_your_password --name mymongo mongo`
 ## 查询
-支持通过模糊查询assert_name获取所有相关子域
-
+支持通过模糊查询assert_name获取所有相关主域，配合管道符可以联动子域名发现工具
 `python search.py --assert_name 百度`
 ![](https://qiniu.xxf.world/pic/2024/10/04/445fe807-8fd7-4d00-bd8b-c447e5dc2ed0.png)
 
