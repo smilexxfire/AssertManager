@@ -1,6 +1,8 @@
 
 import configparser
 import os
+import re
+
 
 def read_ini_config(section_name, key_name, file_name=os.path.dirname(os.path.abspath(__file__)) + "/../default.ini"):
     config = configparser.ConfigParser()
@@ -28,6 +30,16 @@ def rename_dict_key(dict_obj, old_key, new_key):
 def delete_file_if_exists(file_path):
     if os.path.exists(file_path):
         os.remove(file_path)
+def is_valid_ipv4(address):
+    pattern = r'^(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.' \
+              r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.' \
+              r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.' \
+              r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)$'
+    return bool(re.match(pattern, address))
+# 定义一个函数来执行模糊查询
+def fuzzy_search(substring, strings):
+    return [s for s in strings if substring.lower() in s.lower()]
+
 
 if __name__ == '__main__':
     b = read_ini_config("mongodb", "host")

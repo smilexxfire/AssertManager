@@ -1,19 +1,8 @@
 import os
-import pymongo
 from datetime import datetime
 from module.database import conn_db, insert_to_db, create_index, insert_to_comment_db
-import re
 import sys
-
-def is_valid_ipv4(address):
-    pattern = r'^(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.' \
-              r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.' \
-              r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.' \
-              r'(?:25[0-5]|2[0-4]\d|[01]?\d\d?)$'
-    return bool(re.match(pattern, address))
-# 定义一个函数来执行模糊查询
-def fuzzy_search(substring, strings):
-    return [s for s in strings if substring.lower() in s.lower()]
+from utils.tools import is_valid_ipv4, fuzzy_search
 
 def format_all_to_db(input_directory):
     # 获取输入目录下所有的 domains.txt 文件
